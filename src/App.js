@@ -5,9 +5,10 @@ import { BrowserRouter as Router } from 'react-router-dom';
 import Navbar from './components/Navbar';
 import HeroSection from './components/Herosection';
 import Skils from './components/Skills';
+import Experience from './components/Experience';
 import styled from 'styled-components';
 
-import { useState } from 'react';
+import { useEffect, useState } from 'react';
 
 
 
@@ -37,7 +38,9 @@ function App() {
           <HeroSection />
           <Wrapper>
             <Skils />
+            <Experience />
           </Wrapper>
+
 
         </Body>
       </Router>
