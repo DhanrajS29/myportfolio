@@ -40,6 +40,10 @@ function App() {
             <Skils />
             <Experience />
           </Wrapper>
+          <Wrapper>
+            <Contact />
+            
+          </Wrapper>
 
 
         </Body>
