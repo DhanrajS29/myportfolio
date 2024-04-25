@@ -77,7 +77,7 @@ const index = () => {
                     My work experience as a software engineer and working on different companies and projects.
                 </Desc>
                 <TimelineSection>
-                    <div>
+                    <div className='py-5'>
                         {experiences.map((experience,index) => (
                             <div>
                                 <div>
