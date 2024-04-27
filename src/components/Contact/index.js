@@ -1,8 +1,8 @@
 import React from "react";
 import styled from "styled-components";
 import { useRef } from "react";
-import emailjs from "@emailjs/browser";
-import { Snackbar } from "@mui/material";
+// import emailjs from "@emailjs/browser";
+// import { Snackbar } from "@mui/material";
 
 const Container = styled.div`
   display: flex;
@@ -136,16 +136,21 @@ const Contact = () => {
   const [open, setOpen] = React.useState(false);
   const form = useRef();
 
-  const handleSubmit = (e) => {
+//   const handleSubmit = (e) => {
+//     e.preventDefault();
+//     // emailjs.sendForm('service_tox7kqs', 'template_nv7k7mj', form.current, 'SybVGsYS52j2TfLbi')
+//     //   .then((result) => {
+//     //     setOpen(true);
+//     //     form.current.reset();
+//     //   }, (error) => {
+//     //     console.log(error.text);
+//     //   });
+//   };
+  const handleSubmit=(e)=> {
     e.preventDefault();
-    // emailjs.sendForm('service_tox7kqs', 'template_nv7k7mj', form.current, 'SybVGsYS52j2TfLbi')
-    //   .then((result) => {
-    //     setOpen(true);
-    //     form.current.reset();
-    //   }, (error) => {
-    //     console.log(error.text);
-    //   });
-  };
+    alert ("You submitted Succefully")
+    console.log('You clicked submit.');
+  }
 
   return (
     <Container>
@@ -154,7 +159,7 @@ const Contact = () => {
         <Desc>
           Feel free to reach out to me for any questions or opportunities!
         </Desc>
-        <ContactForm ref={form} onSubmit={handleSubmit}>
+        <ContactForm ref={form} onClick={handleSubmit}>
           <ContactTitle>Email Me 🚀</ContactTitle>
           <ContactInput placeholder="Your Email" name="from_email" />
           <ContactInput placeholder="Your Name" name="from_name" />
@@ -162,13 +167,13 @@ const Contact = () => {
           <ContactInputMessage placeholder="Message" rows="4" name="message" />
           <ContactButton type="submit" value="Send" />
         </ContactForm>
-        <Snackbar
+        {/* <Snackbar
           open={open}
           autoHideDuration={6000}
           onClose={() => setOpen(false)}
           message="Email sent successfully!"
           severity="success"
-        />
+        /> */}
       </Wrapper>
     </Container>
   );
